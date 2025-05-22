@@ -8,7 +8,7 @@ export const POST = async (request: Request) => {
   // try {
     const {messages} = await request.json();
     const result = streamText({
-      model: openai("gpt-3.5-turbo"),
+      model: openai("o3"),
       messages,
     });
     return result.toDataStreamResponse({
